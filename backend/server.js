@@ -25,9 +25,9 @@ app.use(cors({
 app.use(express.json());
 
 // Remove i18n if unused
-// app.get('/api/welcome', (req, res) => {
-//   res.json({ message: req.t('welcome') });
-// });
+app.get('/api/welcome', (req, res) => {
+  res.json({ message: req.t('welcome') });
+});
 
 app.use('/api/auth', authRoutes);
 app.use('/api/certificates', certificateRoutes);
