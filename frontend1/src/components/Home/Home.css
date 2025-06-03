@@ -1,0 +1,456 @@
+/* -------------------------------------------------------
+   General Styling
+-------------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------------
+   Sliding Images Section
+-------------------------------------------------------- */
+.Home1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  max-width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.Home1 > img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* -------------------------------------------------------
+   About GramConnect Section
+-------------------------------------------------------- */
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #15803d;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #15803d, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-description {
+  text-align: center;
+}
+
+.main-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #374151;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Feature Grid */
+.about-features {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.feature-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.feature-content p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------
+   Vision & Mission Section
+-------------------------------------------------------- */
+.vision-mission {
+  margin-top: 20px;
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.vision-card,
+.mission-card {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #22c55e;
+  transition: transform 0.3s ease;
+}
+
+.vision-card:hover,
+.mission-card:hover {
+  transform: translateY(-3px);
+}
+
+.vision-card h3,
+.mission-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #15803d;
+  margin-bottom: 15px;
+}
+
+.vision-card p,
+.mission-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* -------------------------------------------------------
+   Statistics Section
+-------------------------------------------------------- */
+.stats-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.icon-blue {
+  background-color: #dcfce7;
+  color: #22c55e;
+}
+
+.icon-green {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.icon-orange {
+  background-color: #fed7aa;
+  color: #f97316;
+}
+
+.icon-purple {
+  background-color: #e9d5ff;
+  color: #a855f7;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* -------------------------------------------------------
+   Services Grid Layout
+-------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f9fafb;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.service-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.service-text p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 10px 0 20px;
+  line-height: 1.6;
+}
+
+.access-btn {
+  padding: 12px 20px;
+  background: #f8fafc;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.access-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9;
+}
+
+/* Color Utilities */
+.orange-bg {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+}
+.green-bg {
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+}
+.blue-bg {
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+}
+.purple-bg {
+  background: #e9d5ff;
+  border: 1px solid #c4b5fd;
+}
+
+.orange {
+  color: #f97316;
+}
+.blue {
+  color: #22c55e;
+}
+.purple {
+  color: #a855f7;
+}
+
+.green-circle {
+  width: 40px;
+  height: 40px;
+  background: #22c55e;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------
+   Why Choose Us Section
+-------------------------------------------------------- */
+.why-choose-section {
+  background: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.why-choose-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 50px;
+}
+
+.why-choose-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 35px 25px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid #f3f4f6;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.why-orange-bg {
+  background: #fed7aa;
+  color: #ea580c;
+}
+.why-green-bg {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.why-blue-bg {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------
+   Contact Section
+-------------------------------------------------------- */
+.contact-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #15803d;
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 50px;
+}
+
+/* You can now safely continue styling `.contact-methods`, forms, etc. */

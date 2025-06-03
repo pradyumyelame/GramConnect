@@ -1,0 +1,140 @@
+/* Container */
+.application-container {
+  max-width: 900px;       /* Increased max-width */
+  width: 90%;             /* Take 90% of viewport width */
+  margin: 40px auto;
+  padding: 30px 40px;     /* More padding for spacious look */
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.app-header {
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.app-header h1 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.app-header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Form */
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;  /* Adds consistent spacing between form rows */
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0; /* removed to use gap */
+}
+
+.form-row label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row input[type="date"],
+.form-row input[type="time"],
+.form-row input[type="number"],
+.form-row select,
+.form-row textarea,
+.form-row input[type="file"] {
+  padding: 10px 14px;    /* Slightly bigger padding */
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  width: 100%;           /* Make inputs full width of container */
+  box-sizing: border-box;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="email"]:focus,
+.form-row input[type="tel"]:focus,
+.form-row input[type="date"]:focus,
+.form-row input[type="time"]:focus,
+.form-row input[type="number"]:focus,
+.form-row select:focus,
+.form-row textarea:focus,
+.form-row input[type="file"]:focus {
+  border-color: #0078d7;
+  outline: none;
+  background: #fff;
+}
+
+/* Full width fields */
+.full-width {
+  width: 100%;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #0078d7;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #005ea1;
+}
+
+/* Not found */
+.not-found {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+
+/* Document specific section */
+.document-specific {
+  background-color: #eef6ff;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.document-specific h3 {
+  margin-bottom: 10px;
+  color: #005ea1;
+}
+
+/* Small note */
+.form-row small {
+  color: #555;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Responsive tweaks for very large screens */
+@media (min-width: 1200px) {
+  .application-container {
+    max-width: 1100px;
+    padding: 40px 50px;
+  }
+}

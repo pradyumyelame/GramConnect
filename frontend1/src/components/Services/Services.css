@@ -1,0 +1,203 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Main container */
+.services-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF6ED 0%, #FFFFFF 50%, #E6F5E6 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.header-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2D3748;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 4rem 1rem 5rem;
+  background: linear-gradient(to right, #FB923C, #4ADE80);
+  color: white;
+  text-align: center;
+}
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2D3748;
+}
+.hero-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #4A5568;
+}
+
+/* Services */
+.services-section {
+  padding: 4rem 1rem;
+}
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Cards */
+.service-card {
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+  background-color: #fff;
+  cursor: default;
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Card Header */
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.service-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.service-card:hover .service-icon-wrapper {
+  transform: scale(1.15);
+}
+.service-icon {
+  width: 32px;
+  height: 32px;
+}
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2D3748;
+}
+.service-description {
+  font-size: 1rem;
+  color: #4A5568;
+}
+
+/* Content */
+.service-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Available Services */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.documents-list {
+  list-style: none;
+  padding: 0;
+}
+.document-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2D3748;
+  margin-bottom: 0.5rem;
+}
+.icon-arrow {
+  color: #A0AEC0;
+}
+.icon-green {
+  color: #34D399;
+}
+.icon-blue {
+  color: #60A5FA;
+}
+
+/* Extra Section */
+.processing-text {
+  color: #4A5568;
+}
+
+/* Button */
+.service-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #4ADE80; /* green shade */
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  user-select: none;
+}
+.service-button:hover,
+.service-button:focus {
+  background-color: white; /* background turns white on hover */
+  color: #22c55e;           /* text and icon turn green */
+  box-shadow: 0 6px 12px rgba(34, 197, 94, 0.4);
+  transform: scale(1.05);
+  outline: none;
+}
+.service-button:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.button-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: inherit; /* inherits color from button text */
+}
+.service-button:hover .button-icon {
+  transform: translateX(4px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  background-color: #f9fafb;
+  color: #718096;
+}
+
+/* Color Classes */
+.orange-bg { background-color: #FFFAF0; border: 1px solid #FED7AA; }
+.green-bg { background-color: #F0FFF4; border: 1px solid #C6F6D5; }
+.blue-bg  { background-color: #EBF8FF; border: 1px solid #BEE3F8; }
+.purple-bg{ background-color: #F5F3FF; border: 1px solid #D6BCFA; }
+
+.orange-icon { background-color: #FEEBCB; color: #F97316; }
+.green-icon  { background-color: #C6F6D5; color: #22C55E; }
+.blue-icon   { background-color: #BEE3F8; color: #3B82F6; }
+.purple-icon { background-color: #E9D8FD; color: #8B5CF6; }

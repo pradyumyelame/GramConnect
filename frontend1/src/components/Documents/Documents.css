@@ -1,0 +1,198 @@
+/* Page background */
+.documents-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF6ED 0%, #FFFFFF 50%, #E6F5E6 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2D3748;
+}
+
+/* Placeholder header/footer */
+.header-placeholder,
+.footer-placeholder {
+  background: #f3f4f6;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Hero section */
+.documents-hero {
+  padding: 4rem 1rem 5rem;
+background-color: #FFB74D;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.documents-title {
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.documents-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+/* Documents grid */
+.documents-list-section {
+  padding: 5rem 1rem 6rem;
+}
+
+.documents-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Card style */
+.document-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem 2rem;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.document-card:hover {
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+.document-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #FEEBCB; /* light orange bg */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.document-icon {
+  color: #F97316; /* orange */
+  width: 28px;
+  height: 28px;
+}
+
+.document-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.document-card-description {
+  font-size: 0.9rem;
+  color: #4A5568; /* gray-600 */
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Required documents */
+.required-docs-section h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2D3748;
+}
+
+.required-docs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #4A5568;
+}
+
+.required-doc-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.check-icon {
+  color: #22C55E; /* green-500 */
+  width: 16px;
+  height: 16px;
+}
+
+/* Processing time and fees row */
+.processing-fees-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #4A5568;
+  margin: 1rem 0 1.25rem;
+}
+
+.processing-time {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.clock-icon {
+  color: #3B82F6; /* blue-500 */
+  width: 16px;
+  height: 16px;
+}
+
+.fees {
+  color: #16A34A; /* green-600 */
+  font-weight: 600;
+}
+
+/* Buttons */
+.service-button {
+  width: 100%;
+  padding: 0.65rem 0;
+  background-color: rgba(255, 255, 255, 0.85); /* milky white */
+  border: none;
+  border-radius: 6px;
+  color: #000000; /* black text */
+  font-weight: 700; /* bold */
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* center text horizontally */
+  align-items: center;     /* center text vertically */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+.service-button:hover {
+  background-color: rgba(255, 255, 255, 1); /* fully white on hover */
+}
+
+/* Status check button */
+.status-check-btn-wrapper {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.status-check-button {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #FB923C; /* orange-400 */
+  background: transparent;
+  color: #FB923C;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.status-check-button:hover {
+  background-color: #FB923C;
+  color: white;
+}
