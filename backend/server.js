@@ -26,8 +26,9 @@ app.use(express.json());
 
 // Remove i18n if unused
 app.get('/api/welcome', (req, res) => {
-  res.json({ message: req.t('welcome') });
+  res.json({ message: 'Welcome to GramConnect API 🎉' });
 });
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/certificates', certificateRoutes);
