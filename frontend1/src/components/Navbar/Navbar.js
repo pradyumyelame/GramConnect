@@ -23,7 +23,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       // Optionally call backend logout API to invalidate token
-      await fetch('http://localhost:5000/api/auth/logout', {
+      await fetch('https://gramconnect.onrender.com/api/auth/logout', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,

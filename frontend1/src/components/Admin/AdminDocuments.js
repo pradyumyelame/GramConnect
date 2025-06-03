@@ -13,7 +13,7 @@ const AdminDocuments = () => {
     setLoading(true);
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:5000/api/certificates/all", {
+      const res = await fetch("https://gramconnect.onrender.com/api/certificates/all", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -54,7 +54,7 @@ const AdminDocuments = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/certificates/${reviewAction}/${selectedApp._id}`,
+        `https://gramconnect.onrender.com/api/certificates/${reviewAction}/${selectedApp._id}`,
         {
           method: "PATCH",
           headers: {

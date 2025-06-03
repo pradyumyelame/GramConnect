@@ -12,7 +12,7 @@ const AdminGrievances = () => {
   useEffect(() => {
     const fetchGrievances = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/grievances/admin');
+        const response = await fetch('https://gramconnect.onrender.com/api/grievances/admin');
         const data = await response.json();
         setGrievances(data);
       } catch (error) {
@@ -25,7 +25,7 @@ const AdminGrievances = () => {
 
   const handleStatusUpdate = async (grievanceId, newStatus, comments) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/grievances/admin/${grievanceId}`, {
+      const res = await fetch(`https://gramconnect.onrender.com/api/grievances/admin/${grievanceId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: newStatus, adminComments: comments })

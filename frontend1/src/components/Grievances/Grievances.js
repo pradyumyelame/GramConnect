@@ -60,7 +60,7 @@ const Grievances = () => {
     setSelectedGrievance(null);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/grievances/user?phone=${encodeURIComponent(phone)}`);
+      const response = await fetch(`https://gramconnect.onrender.com/api/grievances/user?phone=${encodeURIComponent(phone)}`);
       if (!response.ok) throw new Error('Failed to fetch grievances');
       const data = await response.json();
       setGrievances(data || []);
@@ -78,7 +78,7 @@ const Grievances = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/grievances', {
+      const response = await fetch('https://gramconnect.onrender.com/api/grievances', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

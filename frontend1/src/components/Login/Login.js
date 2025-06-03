@@ -24,8 +24,8 @@ const Login = () => {
 
     const endpoint =
       loginType === 'citizen'
-        ? 'http://localhost:5000/api/auth/login/citizen'
-        : 'http://localhost:5000/api/auth/login/admin';
+        ? 'https://gramconnect.onrender.com/api/auth/login/citizen'
+        : 'https://gramconnect.onrender.com/api/auth/login/admin';
 
     try {
       const response = await fetch(endpoint, {

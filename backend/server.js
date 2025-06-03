@@ -3,8 +3,6 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
 
-
-
 import authRoutes from './routes/authRoutes.js';
 import certificateRoutes from './routes/certificateRoutes.js';
 import schemeRoutes from './routes/schemeRoutes.js';
@@ -16,15 +14,20 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+// ✅ CORS setup for deployed frontend
+app.use(cors({
+  origin: 'https://gram-connect-yomm.vercel.app/', // your deployed frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 app.use(express.json());
 
-// i18n middleware
-
-
-app.get('/api/welcome', (req, res) => {
-  res.json({ message: req.t('welcome') });
-});
+// Remove i18n if unused
+// app.get('/api/welcome', (req, res) => {
+//   res.json({ message: req.t('welcome') });
+// });
 
 app.use('/api/auth', authRoutes);
 app.use('/api/certificates', certificateRoutes);

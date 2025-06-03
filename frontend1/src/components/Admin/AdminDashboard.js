@@ -25,7 +25,7 @@ const AdminDashboard = () => {
   const fetchApplications = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/certificates/all', {
+      const res = await fetch('https://gramconnect.onrender.com/api/certificates/all', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -38,7 +38,7 @@ const AdminDashboard = () => {
   const fetchGrievances = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/grievances/counts', {
+      const res = await fetch('https://gramconnect.onrender.com/api/grievances/counts', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
