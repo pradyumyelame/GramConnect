@@ -3,8 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
 
-import i18next from './i18n.js';
-import i18nextMiddleware from 'i18next-http-middleware';
+
 
 import authRoutes from './routes/authRoutes.js';
 import certificateRoutes from './routes/certificateRoutes.js';
@@ -21,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 // i18n middleware
-app.use(i18nextMiddleware.handle(i18next));
+
 
 app.get('/api/welcome', (req, res) => {
   res.json({ message: req.t('welcome') });
