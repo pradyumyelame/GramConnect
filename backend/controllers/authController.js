@@ -24,6 +24,12 @@ export const adminRegister = async (req, res) => {
       return res.status(400).json({ message: 'Passwords do not match' });
     }
 
+    // ✅ Check if an admin with this role already exists
+    const existingRoleUser = await User.findOne({ role });
+    if (existingRoleUser) {
+      return res.status(400).json({ message: `An admin with the role '${role}' is already registered.` });
+    }
+
     const existingUser = await User.findOne({ email });
     if (existingUser) return res.status(400).json({ message: 'Email already registered' });
 
