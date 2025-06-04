@@ -17,7 +17,7 @@ const app = express();
 
 // ✅ CORS setup for deployed frontend
 app.use(cors({
-  origin: 'https://gram-connect-yomm-rda1sc9tb-pradum-yelames-projects.vercel.app',
+  origin: 'https://gram-connect-yomm-oheazlr1q-pradum-yelames-projects.vercel.app',
   credentials: true // if you're using cookies or auth headers
 }));
 
