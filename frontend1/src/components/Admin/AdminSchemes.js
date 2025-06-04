@@ -25,7 +25,7 @@ const AdminSchemes = () => {
 
   const fetchSchemes = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/schemes');
+      const res = await axios.get('https://gramconnect.onrender.com/api/schemes');
       setSchemes(res.data);
     } catch (err) {
       console.error('Error fetching schemes:', err);
@@ -41,7 +41,7 @@ const AdminSchemes = () => {
   const handleAddScheme = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/schemes', newScheme);
+      await axios.post('https://gramconnect.onrender.com/api/schemes', newScheme);
       setNewScheme({ name: '', eligibility: '', benefits: '', link: '', category: '', targetState: '' });
       setShowAddForm(false);
       fetchSchemes();
@@ -65,7 +65,7 @@ const AdminSchemes = () => {
   const handleUpdateScheme = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/schemes/${editingScheme._id}`, editingScheme);
+      await axios.put(`https://gramconnect.onrender.com/api/schemes/${editingScheme._id}`, editingScheme);
       setEditingScheme(null);
       fetchSchemes();
     } catch (err) {
@@ -76,7 +76,7 @@ const AdminSchemes = () => {
   const handleDeleteScheme = async (id) => {
     if (!window.confirm('Are you sure you want to delete this scheme?')) return;
     try {
-      await axios.delete(`/api/schemes/${id}`);
+      await axios.delete(`https://gramconnect.onrender.com/api/schemes/${id}`);
       fetchSchemes();
     } catch (err) {
       console.error('Error deleting scheme:', err);
